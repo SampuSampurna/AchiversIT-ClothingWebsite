@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best shopping platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style>
+        body {
+            margin: 0;
+            /* avoid extra spacing in body */
+            padding: 0;
+            font-family: sans-serif;
+
+        }
+
+        
+
+
+        .container-aboveheader {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            background-color: rgb(200, 212, 200);
+            padding: 8px;
+            text-align: center;
+            border-bottom: 2px solid darkcyan;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 9% 37% 54%;
+            margin: 0;
+            padding: 0 50px;
+            align-items: center;
+        }
+
+        .linksinheader {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .linksinheader a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: rgb(51, 153, 156);
+        }
+
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 53%;
+            border: 2px solid lightgrey;
+
+        }
+
+        .search-container input {
+            width: calc(100% - 50px);
+            /* Adjust width to leave space for the image */
+
+            box-sizing: border-box;
+            height: 38px;
+            border: none;
+            /* Remove border */
+            outline: none;
+            /* Remove outline */
+        }
+
+        .search-container img {
+            position: absolute;
+            right: 30px;
+            height: 20px;
+            /* Adjust height as needed */
+            width: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 4%;
+        }
+
+        .icons .icons-header {
+            height: 24px;
+            width: 24px;
+            padding: 0 9px;
+        }
+
+        .footer-topcontainer {
+            display: grid;
+            grid-template-columns: 35% 30% 35%;
+            background-color: rgb(165, 216, 198);
+            padding: 19px 50px;
+        }
+
+        .mail-container {
+            display: grid;
+            grid-template-columns: 10% 90%;
+        }
+
+        #email-input {
+            padding: 12px 124px 12px 25px;
+
+            border: none;
+
+        }
+
+        #subscribe-btn {
+            padding: 10px 32px;
+            background-color: black;
+            color: white;
+        }
+        #subscribe-btn:hover{
+            background-color: darkcyan;
+            border:2px solid darkcyan;
+         
+        }
+
+        .footer-maincontainer {
+            display: grid;
+            grid-template-columns: 37% 17% 17% 29%;
+            padding: 0 50px;
+            margin-top: 28px;
+            ;
+        }
+
+        .social-media-container {
+            display: flex;
+
+
+        }
+
+        .social-media-container img {
+            height: 20px;
+            width: 20px;
+            margin-top: -8px;
+        }
+
+        .index-firstcontainer {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            padding: 50px;
+        }
+
+        #index-shopbutton {
+            background-color: darkcyan;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 4px;
+            border: none;
+            border-radius: 3px;
+        }
+        #index-shopbutton:hover{
+            color: black;
+            background-color: white;
+            border: 3px solid darkcyan;
+        }
+
+        #index-first-leftcontainer {
+            margin-top: 70px;
+        }
+
+        .index-secondcontainer {
+            padding: 50px;
+        }
+
+        .index-popularcategory {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+        }
+
+        .popularcategory-individual {
+            border: 1px solid lightgreen;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .category-image {
+            width: 191px;
+    height: 200px;
+
+            border-radius: 10px;
+        }
+
+        .index-thirdcontainerbuttons {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 17px 5px;
+            font-weight: bold;
+        }
+
+        .actived {
+            background-color: rgb(242 216 150 / 96%);;
+            color: rgb(43 152 142);;
+        }
+
+        .index-thirdcontainer {
+            display: flex;
+            padding: 0 50px;
+        }
+
+        .shop-productimage {
+            width: 297px;
+            height: 315px;
+            border-radius: 22px;
+        }
+
+        .shop-productscontainer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px
+        }
+
+        .shop-maincontainer {
+            padding: 0 50px;
+        }
+
+        .shop-individualproduct {
+            padding: 50px;
+            border: 1px solid lightgreen;
+            padding: 15px;
+            border-radius: 22px;
+        }
+
+        .shop-price {
+            color: rgb(17, 153, 123);
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .shop-discountprice {
+            color: lightslategrey;
+            text-decoration: line-through;
+            font-size: 15px;
+        }
+
+        .ratings-color {
+            color: orange;
+        }
+
+        .dealstime {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 3px;
+            background-color: rgb(34, 106, 102);
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .offerdealsbutton {
+            padding: 12px 20px;
+            border: 2px solid rgb(34, 106, 102);
+            border-radius: 3px;
+            background-color: lightcyan;
+            color: rgb(34, 106, 102);
+        }
+
+        .index-offerscontainer {
+            padding: 0 50px 0 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+
+            margin-top: 50px;
+        }
+
+        #indexoffer-individual1 {
+            background-image: url(./img/deals-1.jpg);
+        }
+
+        /* background images for deals */
+
+        #indexoffer-individual2 {
+            background-image: url(./img/deals-2.png);
+        }
+
+        .newarrivals-container {
+            padding: 50px;
+        }
+
+        .index-lastcontainer {
+            padding: 50px 0 0 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .showcase-individualproduct {
+            display: flex;
+        }
+
+        .showcase-img {
+            height: 82px;
+            width: 80px;
+        }
+        .addcarticon {
+            background-color: #e1fde1;
+            border-radius: 50%;
+            padding: 16px 18px;
+            border: 1px solid #95cd95;
+        }
+        .tooltip {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;  
+ width: 95px;
+    background-color: #077e82;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -47px;
+    margin-bottom: -18px;
+
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #077e82 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.addcarticon:hover {
+    background-color: #077e82;
+    color: white;
+}
+.hiddenimg, .hiddenicontainer {
+    display: none;
+}
+
+.image-container:hover .originalimg {
+    display: none;
+}
+.image-container:hover .parabelowimg{
+    margin-top: 125px;
+}
+.image-container:hover .hiddenimg,
+.image-container:hover .hiddenicontainer {
+    display: block;
+}
+.footerlinks:hover{
+            padding-left: 7px;
+            color: rgb(34, 115, 106);
+        }
+.hidden-icons{
+    font-size: 15px;
+    padding: 9px 4px;
+}
+.hiddeniconbtn{
+    border-radius: 50%;
+    border: none;
+}
+.offer-text{
+    border-radius: 35%;
+    padding: 7px 13px;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    margin: 14px 12px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;  
+ width: 95px;
+    background-color: #077e82;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -47px;
+    margin-bottom: -18px;
+
+}
+
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #077e82 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.addcarticon:hover {
+    background-color: #077e82;
+    color: white;
+}
+.hiddeniconbtn:hover {
+    background-color: #077e82;
+    color: white;
+} 
+
+
+
+        @media only screen and (min-width: 245px) and (max-width: 1024px) {
+            body {
+                width: 400%;
+            }
+
+            .footer-topcontainer {
+                grid-template-columns: 25% 30% 45%;
+            }
+
+            .category-image {
+                width: 352px;
+                height: 218px;
+            }
+
+            .index-popularcategory {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+
+            .shop-productscontainer {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .shop-individualproduct {
+                padding: 20px 25%;
+            }
+
+            .index-lastcontainer {
+                grid-template-columns: 50% 50%;
+            }
+
+            .showcase-img {
+                height: 140px;
+                width: 200px;
+            }
+            
+
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="container-aboveheader">
+        <section>(+01)-2345-6789 <span style="margin-left: 15px;"> Our location</span></section>
+        <section>Super Value Deals-Save more coupons</section>
+        <section>Log In/Sign Up</section>
+    </section>
+    <!-- footer section for webpage starts here -->
+    <header>
+        <!-- threee sections are created for header -->
+        <section>
+            <img src="./img/logo.png" alt="logo" height="70px" width="100px">
+        </section>
+        <section>
+            <nav>
+                <ul class="linksinheader">
+                    <li><a href="index.html" target="_self" style="color: rgb(51, 153, 156);">Home</a></li>
+                    <li><a href="Shop.html" target="_self">Shop</a></li>
+                    <li><a style="margin-left: -19%;" href="Account.html" target="_self">My Account</a></li>
+                    <li><a href="Compare.html" target="_self">Compare</a></li>
+                    <li><a href="Login-Register.html" target="_self">Login</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="icons">
+            <div class="search-container">
+                <input type="search" placeholder="Search For Items...">
+                <img src="./img/search.png" alt="search icon" />
+            </div>
+            <img src="./img/icon-heart.svg" class="icons-header" alt="heart-icon" />
+            <span style="background-color: #077e82; border-radius: 50%; padding: 0px 5px; margin: -24px -44px 2px 21px; color: white;">3</span>
+            <img src="./img/icon-cart.svg" class="icons-header" alt="cart-icon" />
+            <span style="background-color: #077e82; border-radius: 50%; padding: 0px 5px; margin: -29px 56px 0px -57px; color: white;">3</span>
+        </section>
+    </header>
+    <main>
+        <!-- this is main part of web page -->
+        <section class="index-firstcontainer">
+            <section id="index-first-leftcontainer">
+                <p>Hot Promotions</p>
+                <h2 style="font-size:35px;">Fashion Trending <span style="color: darkcyan; font-size: 40px;"> Great
+                        <br />Collection</span></h2>
+                <p style="margin-top: -14px;">Save more with coupons $ up to 20% off</p>
+                <button id="index-shopbutton">Shop Now</button>
+            </section>
+            <img src="./img/home-img.png" alt="girl-image" width=95% />
+
+        </section>
+        <section class="index-secondcontainer">
+            <section style="display: flex; justify-content: space-between;">
+            <h3><span style="color: darkcyan;">Popular </span> Category</h3>
+            <section>
+                <span style="background-color: #d3f7e3;
+                border-radius: 50%;
+                color: #337476;
+                border: 1px solid lightgreen;
+                padding: 8px 10px; margin-right: 5px;"> < </span>
+                <span style="background-color: #d3f7e3;
+                border-radius: 50%;
+                padding: 8px 10px;
+                border: 1px solid lightgreen;
+            color: #337476;"> > </span>
+            </section>
+            </section>
+            <section class="index-popularcategory">
+                <section class="popularcategory-individual">
+                    <img src="./img/category-1.jpg" alt="t-shirt-image" class="category-image" />
+                    <p style="text-align: center;">T-Shirts</p>
+                </section>
+                <section class="popularcategory-individual">
+                    <img src="./img/category-2.jpg" alt="t-shirt-image" class="category-image" />
+                    <p style="text-align: center;">Bags</p>
+                </section>
+                <section class="popularcategory-individual">
+                    <img src="./img/category-3.jpg" alt="t-shirt-image" class="category-image" />
+                    <p style="text-align: center;">Sandals</p>
+                </section>
+                <section class="popularcategory-individual">
+                    <img src="./img/category-4.jpg" alt="t-shirt-image" class="category-image" />
+                    <p style="text-align: center;">ScarfCap</p>
+                </section>
+                <section class="popularcategory-individual">
+                    <img src="./img/category-5.jpg" alt="t-shirt-image" class="category-image" />
+                    <p style="text-align: center;">Shoes</p>
+                </section>
+                <section class="popularcategory-individual">
+                    <img src="./img/category-6.jpg" alt="t-shirt-image" class="category-image" />
+                    <p style="text-align: center;">Pillowcase</p>
+                </section>
+            </section>
+        </section>
+        <section class="index-thirdcontainer">
+            <section>
+                <button class="index-thirdcontainerbuttons actived">Featured</button>
+                <button class="index-thirdcontainerbuttons">Popular</button>
+                <button class="index-thirdcontainerbuttons">New Added</button>
+            </section>
+        </section>
+
+        <section class="shop-maincontainer">
+            <p>We found <span style="color: rgb(37, 112, 115);"> 688 </span> items for you!</p>
+            <section class="shop-productscontainer">
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    <span class="offer-text" style="background-color: rgb(253 66 131);">Hot</span>
+                    <img src="./img/product-1-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-1-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    <span class="offer-text" style="background-color: rgb(61 178 155);">Hot</span>
+                    <img src="./img/product-2-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-2-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    <span class="offer-text" style="background-color: rgb(234 166 81);">Hot</span>
+                    <img src="./img/product-3-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-3-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    <span class="offer-text" style="background-color: rgb(78 185 236);">Hot</span>
+                    <img src="./img/product-4-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-4-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    <span class="offer-text" style="background-color: rgb(78 185 236); padding: 7px;">-30%</span>
+                    <img src="./img/product-5-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-5-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    <span class="offer-text" style="background-color: rgb(78 185 236); padding: 7px;">-22%</span>
+                    <img src="./img/product-6-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-6-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    <span class="offer-text" style="background-color: rgb(29, 163, 154); padding: 7px;">-22%</span>
+                    <img src="./img/product-7-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-7-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    
+                    <img src="./img/product-8-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-8-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                
+
+                </section>
+                </section>
+        </section>
+        <section class="index-offerscontainer">
+            <!-- created two cesctions for deals means offer and each sections added background as image-->
+            <section id="indexoffer-individual1">
+                <section style="padding: 40px;">
+                    <h2 style="color: rgb(17, 113, 117); margin-top: -5px 0;"> Deals of the Day</h2>
+                    <p>Limited Quantities</p>
+                    <h3>Summer Collection New <br /> Modern Design</h3>
+                    <h3><span style="color: red;">$139.00 </span><span
+                            style="color: lightslategrey; text-decoration: line-through;"> $160.99</span></h3>
+                    <h4 style="color: rgb(34, 106, 102);">Hurry Up! Offer Ends In:</h4>
+                    <section style="display: flex; text-align: center; justify-items: center; margin-top: -10px;">
+                        <section>
+                            <button class="dealstime">02</button><br />
+                            Days
+                        </section><span style="margin: 13px 10px; ">:</span>
+                        <section>
+                            <button class="dealstime">22</button><br />
+                            Hours
+                        </section><span style="margin: 13px 10px;">:</span>
+                        <section>
+                            <button class="dealstime">57</button><br />
+                            Mins
+                        </section><span style="margin: 13px 10px;">:</span>
+                        <section>
+                            <button class="dealstime">28</button><br />
+                            Sec
+                        </section>
+                    </section>
+                    <br />
+                    <button class="offerdealsbutton"><b>Shop Now</b></button>
+                </section>
+
+            </section>
+            <section id="indexoffer-individual2">
+                <section style="padding: 40px;">
+                    <h2 style="color: rgb(17, 113, 117); margin-top: -5px 0;"> Women Clothing</h2>
+                    <p>Shirts & Bag</p>
+                    <h3>Try Something new on <br /> vacation</h3>
+                    <h3><span style="color: red;">$178.00 </span><span
+                            style="color: lightslategrey; text-decoration: line-through;"> $256.99</span></h3>
+                    <h4 style="color: rgb(34, 106, 102);">Hurry Up! Offer Ends In:</h4>
+                    <section style="display: flex; text-align: center; justify-items: center; margin-top: -10px;">
+                        <section>
+                            <!--buttons and along with text is used according to the design-->
+                            <button class="dealstime">02</button><br />
+                            Days
+                        </section><span style="margin: 13px 10px; ">:</span>
+                        <section>
+                            <button class="dealstime">22</button><br />
+                            Hours
+                        </section><span style="margin: 13px 10px;">:</span>
+                        <section>
+                            <button class="dealstime">57</button><br />
+                            Mins
+                        </section><span style="margin: 13px 10px;">:</span>
+                        <section>
+                            <button class="dealstime">28</button><br />
+                            Sec
+                        </section>
+                    </section>
+                    <br />
+                    <button class="offerdealsbutton"><b>Shop Now</b></button>
+                </section>
+            </section>
+
+        </section>
+
+
+        <section class="newarrivals-container">
+            <h2><span style="color: rgb(37, 91, 93);">New</span> Arrivals</h2>
+            <section class="shop-productscontainer">
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    <span class="offer-text" style="background-color: rgb(253 66 131);">Hot</span>
+                    <img src="./img/product-1-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-1-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    <span class="offer-text" style="background-color: rgb(61 178 155);">Hot</span>
+                    <img src="./img/product-2-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-2-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    <span class="offer-text" style="background-color: rgb(234 166 81);">Hot</span>
+                    <img src="./img/product-3-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-3-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                <section class="shop-individualproduct">
+                    
+                    <section class="image-container" style="position: relative;">
+                    <span class="offer-text" style="background-color: rgb(78 185 236);">Hot</span>
+                    <img src="./img/product-4-1.jpg" alt="shirt-image" class="shop-productimage originalimg" />
+                    <img src="./img/product-4-2.jpg" alt="shirt-image" class="shop-productimage hiddenimg" />
+                    
+                   <section style="
+                    margin-top: -140px;
+                
+                    margin-left: 90px;
+                " class="hiddenicontainer">
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-eye hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Quick View</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-regular fa-heart hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Add To Cart</span></i></button>
+                    <button class="hiddeniconbtn"><i class="fa-solid fa-shuffle hidden-icons tooltip"><span class="tooltiptext" style="margin-bottom: -10px; font-size: 10px;">Compare</span></i></button>
+                    </section>
+                    <p style="color: lightslategrey;" class="parabelowimg">clothing</p>
+                </section>
+            
+                    
+                    <h4>Colorful Pattern Shirts</h4>
+                    <section style="display: flex; justify-content: space-between;">
+                        <div>
+                            <i class="fa-regular fa-star ratings-color"></i> <!--this is for rating icons -->
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <i class="fa-regular fa-star ratings-color"></i>
+                            <p><span class="shop-price">$238.85 </span><span class="shop-discountprice"> $245.8</span>
+                            </p>
+                        </div>
+                        <div style="margin-right:20px;"><i class="fal fa-bag-shopping addcarticon tooltip"><span class="tooltiptext">Add To Cart</span></i></div>
+                    </section>
+
+                </section>
+                
+
+            </section>
+
+            <section class="index-lastcontainer">
+                <section>
+                    <h3>Hot Releases</h3>
+                    <section class="lastcontsub-container">
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-1.jpg" alt="bag-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Floral Print Casual Cotton</p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4> <!-- span is used here to style para some part only-->
+                            </section>
+                        </section>
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-2.jpg" alt="pillowcase-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Ruffled Solid Long Sleeve </p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4>
+                            </section>
+                        </section>
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-3.jpg" alt="bag-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Stylish Trendy College Bag</p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <section>
+                    <h3>Deals & Outlet</h3>
+                    <section class="lastcontsub-container">
+                        <!--created each individual sections for each product container -->
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-4.jpg" alt="cap-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Fish Print Patched T-Shirt</p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4>
+                            </section>
+                        </section>
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-5.jpg" alt="shirte-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Fintage Floral Print Dress</p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4>
+                            </section>
+                        </section>
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-6.jpg" alt="Tshirt-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Multi-color Print V-neck T-Shirt</p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4>
+                            </section>
+                        </section>
+                    </section>
+
+                </section>
+                <section>
+                    <h3>Top Selling</h3>
+                    <section class="lastcontsub-container">
+                        <!--created each individual sections for each product container -->
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-7.jpg" alt="shoe-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Latest Shoe Design</p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4>
+                            </section>
+                        </section>
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-8.jpg" alt="handbag-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Ruffled Solid Long Bag </p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4>
+                            </section>
+                        </section>
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-9.jpg" alt="tshirt-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Daily Print V-neck T-Shirt</p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <section>
+                    <h3>Trendy</h3>
+                    <section class="lastcontsub-container">
+                        <!--created each individual sections for each product container -->
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-7.jpg" alt="shoe-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Floral printed Shoe Design</p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4>
+                            </section>
+                        </section>
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-8.jpg" alt="handbag-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Ruffled Solid Long Bag </p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4>
+                            </section>
+                        </section>
+                        <section class="showcase-individualproduct">
+                            <img src="./img/showcase-img-9.jpg" alt="tshirt-image" class="showcase-img" />
+                            <section style="margin-left: 18px;">
+                                <p>Multicolor Print V-neck T-Shirt</p>
+                                <h4 style="margin-top: -5px;"><span style="color: rgb(43, 119, 121);">$238.85
+                                    </span><span style="text-decoration: line-through; color: lightslategray;">
+                                        $245.8</span></h4>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+
+    </main>
+
+    <footer>
+        <!--this is footer part -->
+        <section class="footer-topcontainer">
+            <section>
+                <section class="mail-container">
+                    <img src=".\img\icon-email.svg" alt="mail-icon" height="30px" width="30px"
+                        style="margin-top: 7px;" />
+                    <section style="padding-top: 12px;">Sign in to Newsletter</section>
+                </section>
+            </section>
+            <section style="padding-top: 12px;">...and receive $25 coupon for first shopping</section>
+            <section><input type="email" placeholder="Enter Your Email" id="email-input"><button
+                    id="subscribe-btn">Subscribe</button></section>
+        </section>
+        <section class="footer-maincontainer">
+            <!--created 4 sections for footer -->
+            <section>
+                <img src="./img/logo.png" alt="logo" height="70px" width="100px">
+                <section>
+                    <p>Contact</p>
+                    <p><b>Address:</b>13 Hemcen Road, Street 32, Beb-Wahren</p>
+                    <p><b>Phone:</b>(+01) 2222 365 /(+91)01 2345 6789</p>
+                    <p><b>Hours:</b>10:00-18:00,Mon-Sat</p><br />
+                    <p>Follow Me</p>
+                    <section class="social-media-container">
+                        <img src="./img/icon-facebook.svg" alt="facebook" />
+                        <img src="./img/icon-twitter.svg" alt="twitter" />
+                        <img src="./img/icon-instagram.svg" alt="instagram" />
+                        <img src="./img/icon-pinterest.svg" alt="pintrest" />
+                        <img src="./img/icon-youtube.svg" alt="youtube" />
+                    </section>
+                </section>
+            </section>
+
+            <section>
+                <h3>Address</h3>
+                <p class="footerlinks">About Us</p>
+                <p class="footerlinks">Delivery Information</p>
+                <p class="footerlinks">Privacy Policy</p>
+                <p class="footerlinks">Terms & Conditions</p>
+                <p class="footerlinks">Contact Us</p>
+                <p class="footerlinks">Support Center</p>
+            </section>
+            <section>
+                <h3>My Account</h3>
+                <p class="footerlinks">Sign In</p>
+                <p class="footerlinks">View Cart</p>
+                <p class="footerlinks">My Wishlist</p>
+                <p class="footerlinks">Track My Order</p>
+                <p class="footerlinks">Help</p>
+                <p class="footerlinks">Order</p>
+            </section>
+            <section>
+                <h3>Secured Payed Gateways</h3>
+
+                <img src="./img/payment-method.png" alt="payment-method" />
+
+            </section>
+            
+        </section>
+        <section style="padding: 50px 50px 0 50px;">
+            <hr />
+            <section style="display: flex; justify-content: space-between;">
+                <p><i class="fa-regular fa-copyright"></i> 2024SAMPURNA, All Rights Reserved</p>
+                <p>Designed by SAMPURNA</p>
+            </section>
+        </section>
+
+    </footer>
+</body>
+
+</html>
